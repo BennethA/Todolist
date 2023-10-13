@@ -15,7 +15,7 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
     }
   }
   
-  function updateTodo(titles, id, completed) {
+  function updateTodo(title, id, completed) {
     const newTodo = todos.map((todo) => 
     // What does the condition mean? 
       todo.id === id ? {title, id, completed} : todo
