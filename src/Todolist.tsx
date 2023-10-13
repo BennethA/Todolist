@@ -11,6 +11,7 @@ const Todolist = ({todos, setTodos, setEditTodo}) => {
         return item;
       })
     )
+    console.log(7)
   }
 
   function handleEdit({id}) {
