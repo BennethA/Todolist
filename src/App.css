@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+body {
+  background-color: rgb(11, 10, 34);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  background-color: rgb(78, 30, 133);
+  width: 400px;
+  border-radius: 20px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.add-btn {
+  background: none;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn2 {
+  height: 30px;
+  padding: 10px;
+  background-color: rgb(155, 189, 5);
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.1s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn2:active {
+  height: 35px;
+  padding: 8px;
+  background-color: rgb(255, 0, 0);
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.input {
+  font-size: x-large;
+  font-weight: bold;
+  height: 50px;
+  width: 100%;
+  margin-right: 10px;
+  border: 3px solid rgb(60, 105, 34);
+  padding: 10px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  outline: none;
+}
+
+.lists{
+  margin-top: 10px;
+  background-color: rgb(30, 18, 136);
+  width: 100%;
+  border: 2px solid;
+  display: flex;
+}
+
+.lists p{
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  padding: 5px; 
+  width: 100%;
+  overflow: auto;
+}
+
+.lists div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.lists div button{
+  width: 40px;
+  height: 30px;
+  background: none;
+  border: 2px solid;
+}
+
+.button-complete {
+  color: red;
+}
+
+.button-edit {
+  color: yellow;
+}
+
+.button-delete {
+  color: green;
+}
+
+.complete {
+  text-decoration: line-through 6px red dashed;
+  opacity: 0.2;
+}
