@@ -4,7 +4,6 @@ const Todolist = ({todos, setTodos, setEditTodo}) => {
       //Why are we mapping through the todos to check if the condition is true? 
       //Are we mapping through it to check the list in which the handleComplete was clicked
       todos.map((item) => {
-        // Is item now representing todos?
         if(item.id === id) {
           // Why do we map through the todos? Can't we just put the return statement into the setTodos for it to be represented in todos? And why is it in a curly bracket
           return {...item, completed: !item.completed}
