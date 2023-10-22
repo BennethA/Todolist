@@ -4,7 +4,6 @@ const Todolist = ({todos, setTodos, setEditTodo}) => {
       //Why are we mapping through the todos to check if the condition is true? 
       //Are we mapping through it to check the list in which the handleComplete was clicked
       todos.map((item) => {
-        // Is item now representing todos?
         if(item.id === id) {
           // Why do we map through the todos? Can't we just put the return statement into the setTodos for it to be represented in todos? And why is it in a curly bracket
           return {...item, completed: !item.completed}
@@ -16,7 +15,7 @@ const Todolist = ({todos, setTodos, setEditTodo}) => {
 
   function handleEdit({id}) {
     // Is the statement on line 16 checking if the id of element in which the edit todo button has been clicked on the same as the element in which the todo paragraph has been displayed? If yes, does it mean that the editTodo state will be set to true boolean? And the completed will be set to true as well?
-    const findTodo = todos.find((todo) => todo.id === id);
+    const findTodo = todos.find(todo => todo.id === id);
     setEditTodo(findTodo)
   }
 
@@ -28,7 +27,7 @@ const Todolist = ({todos, setTodos, setEditTodo}) => {
     <div>
       {
         // Why do we always put a parameter in the function of the map? Is it used to connect with the todos being mapped? Same question for handleComplete, handleEdit and handleDelete
-        todos.map((todo) => (   
+        todos.map((todo) => ( 
           <li className="lists" key={todo.id}>
             <p className={`${todo.completed ? 'complete' : ''}`}>
               {todo.title}

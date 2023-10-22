@@ -2,20 +2,19 @@ import { useEffect } from 'react';
 
 const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
   
-  const onFormSubmit = (event) => {
+  const onFormSubmit = (event) => {  
     event.preventDefault();
-    // editTodo is set to null initially in App component, and in Todolist component, we are giving it a boolean value. So if editTodo has been set to true, does it means on line 8, if it's not true the statement should run and if its true the else statement should run? 
     if(!editTodo) {
       // Can you explain the statement in the curly bracket
       setTodos([...todos, {id: newItem.id, title: input, completed: false} ])
       setInput('')
-    } else {
+    } else if(editTodo) {
       // How did they get the id of editTodo? Cos editTodo has no id same as completed.
-      updateTodo(input, editTodo.id, editTodo.completed)
+      updateTodo(input, editTodo.id, editTodo.completed)  
     }
   }
   
-  function updateTodo(titles, id, completed) {
+  function updateTodo(title, id, completed) {
     const newTodo = todos.map((todo) => 
     // What does the condition mean? 
       todo.id === id ? {title, id, completed} : todo
