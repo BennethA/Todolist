@@ -4,7 +4,6 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
   
   const onFormSubmit = (event) => {
     event.preventDefault();
-    // editTodo is set to null initially in App component, and in Todolist component, we are giving it a boolean value. So if editTodo has been set to true, does it means on line 8, if it's not true the statement should run and if its true the else statement should run? 
     if(!editTodo) {
       // Can you explain the statement in the curly bracket
       setTodos([...todos, {id: newItem.id, title: input, completed: false} ])
