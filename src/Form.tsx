@@ -2,20 +2,20 @@ import { useEffect } from 'react';
 
 const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
   
-  const onFormSubmit = (event) => {
+  const onFormSubmit = (event) => {  
     event.preventDefault();
     if(!editTodo) {
       setTodos([...todos, {id: newItem.id, title: input, completed: false} ])
       setInput('')
-    } else {
+    } else if(editTodo) {
       // How did they get the id of editTodo? Cos editTodo has no id same as completed.
-      updateTodo(input, editTodo.id, editTodo.completed)
+      updateTodo(input, editTodo.id, editTodo.completed)  
     }
   }
   
   function updateTodo(title, id, completed) {
     const newTodo = todos.map((todo) => 
-    // What does the condition mean? 
+    // What does the condition mean? hfhf
       todo.id === id ? {title, id, completed} : todo
     )
     setTodos(newTodo);
