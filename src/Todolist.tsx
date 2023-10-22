@@ -1,7 +1,7 @@
 const Todolist = ({todos, setTodos, setEditTodo}) => {
   function handleComplete({id}) {
     setTodos(
-      //Why are we mapping through the todos to check if the condition is true? 
+      //Why are we mapping through the todos to check if the condition is true?  
       //Are we mapping through it to check the list in which the handleComplete was clicked
       todos.map((item) => {
         if(item.id === id) {
