@@ -5,7 +5,6 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     if(!editTodo) {
-      // Can you explain the statement in the curly bracket
       setTodos([...todos, {id: newItem.id, title: input, completed: false} ])
       setInput('')
     } else {
